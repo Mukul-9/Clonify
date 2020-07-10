@@ -23,7 +23,7 @@ def signupuser(request):
 				'Your go-to tech shopping website!',
 				'We look forward to serving you..',
 				'azizsharif2000@gmail.com',
-				'stuffmukuldoes.com',
+				'stuffmukuldoes@gmail.com',
 				[email_message],
 				fail_silently=False
 				)
