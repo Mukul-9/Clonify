@@ -1,9 +1,10 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
-from .form import RegisterForm
-from django.contrib.auth.forms import AuthenticationForm
+from .form import RegisterForm,SigninForm
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 def home(request):
@@ -16,6 +17,14 @@ def signupuser(request):
 		if request.POST['password']==request.POST['confirm_password']:
 			user = User.objects.create_user(username=request.POST['username'],password=request.POST['password'],email=request.POST['email'])
 			user.save()
+			email_message = request.POST['email']
+			send_mail(
+				'kya be bakchod',
+				'sonam gupta bewafa h',
+				'azizsharif2000@gmail.com',
+				[email_message],
+				fail_silently=False
+				)
 			login(request,user)
 			return redirect('home')
 		else:
@@ -31,11 +40,11 @@ def logoutuser(request):
 
 def loginuser(request):
 	if request.method=='GET':
-		return render(request, 'cloneapp/loginuser.html',{'form':AuthenticationForm()})
+		return render(request, 'cloneapp/loginuser.html',{'form':SigninForm()})
 	else:
 		user = authenticate(request, username=request.POST['username'],password=request.POST['password'])
 		if user is None:
-			return render(request, 'cloneapp/loginuser.html',{'form':AuthenticationForm()})
+			return render(request, 'cloneapp/loginuser.html',{'form':SigninForm()})
 		else:
 			login(request,user)
 			return redirect('home')
