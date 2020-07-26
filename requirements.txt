@@ -1,0 +1,7 @@
+Django==3.0.2
+django-filter==2.2.0
+django-storages==1.8
+docutils==0.15.2
+pytz
+whitenoise
+
