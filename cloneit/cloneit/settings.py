@@ -25,7 +25,7 @@ SECRET_KEY = '1%sry8a!*u%hryr+#h1xa8)u&7p1123^oy%6y@a*w7o=p6q5ov'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["clonifyy.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ['clonifyy.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
