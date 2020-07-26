@@ -72,6 +72,7 @@
     margin-top: 50px;
     background-color: #ffa98f; /* Green */
     border: none;
+		border-radius: 30px;
 		outline:none;
     color: black;
     padding: 15px 32px;
@@ -99,7 +100,16 @@
 	<div class="container">
 		<h1 class="product-name">{{product.name}}</h1>
 		<h3 class="product-description">{{product.description}}</h3>
+
+		{% if product.discount %}
+		<p style="text-decoration: line-through;">{{product.price}}</p>
+	
+		<h4 class="product-price">Price: {{product.discounted_price}} Rs</h3>
+		{% else %}
 		<h4 class="product-price">Price: {{product.price}} Rs.</h4>
+
+		{% endif %}
+		
 		
 	<form method="POST" action='{% url "cart" %}'>
 		{% csrf_token %}
