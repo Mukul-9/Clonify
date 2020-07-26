@@ -1,8 +1,8 @@
 # Clonify
-This is going to be a gadget-shopping website clone with custom modifications and changes in layouts. Liquid Motions take the User-Experience one step further.
+This is going to be a gadget-shopping website clone with custom modifications and changes in layouts. Liquid Motions will be taking the User-Experience one step further.
 The website is linked to a database and can store quite some amount of data like:
 
--  The Login/Register details of the users, which can be used to retreive data anytime,
+-  The Login/Register details of the users,
 -  The items added to cart by individual users,
 -  Address Book to manage office and home addresses along with the time of day when they can be contacted.
 
@@ -13,6 +13,7 @@ STACK USED:
 PRE-REQUISITES:
 - Python 
 - Django
+
 must be installed in your machine.
 You can also create a virtual environment for development purposes. (not compulsory).
  
