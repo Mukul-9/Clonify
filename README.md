@@ -13,6 +13,8 @@ STACK USED:
 PRE-REQUISITES:
 - Python 
 - Django
+- guincorn (optional)
+- whitenoise (optional)
 
 must be installed in your machine.
 You can also create a virtual environment for development purposes. (not compulsory).
