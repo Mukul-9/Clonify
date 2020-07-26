@@ -1,7 +1,0 @@
-Django
-django-filter
-django-storages
-docutils
-pytz
-whitenoise
-gunicorn
